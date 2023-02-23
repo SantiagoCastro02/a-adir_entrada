@@ -77,7 +77,7 @@ class MesEntrada:
             id_, mes = self.treeview.item(selected_row, 'values')
 
             # Añadir mensaje de precaución antes de eliminar
-            respuesta = messagebox.askquestion('Eliminar fila', f'¿Está seguro que desea ELIMINAR el mes "{mes}"?')
+            respuesta = messagebox.askquestion('Eliminar fila', f'¿Estás seguro que desea ELIMINAR el mes "{mes}"?')
 
             # Si el usuario confirma la eliminación, proceder
             if respuesta == messagebox.YES:
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     app = MesEntrada(root)
     #root.geometry("2000x700")  # Establecer el tamaño de la ventana principal
     root.attributes('-fullscreen', True)
-    root.iconbitmap("C:/Users/Usuario/Desktop/Proyecto INCO/M.I software/logoico.ico")
+    root.iconbitmap("E:/Proyecto INCO/M.I software/logoico.ico")
     root.config(bg='white')
     root.mainloop()
 

@@ -20,11 +20,11 @@ class AnoEntrada:
         self.bienvenido_label.place(x=500, y=70)
 
         # Crear un widget Treeview
-        self.tree = ttk.Treeview(self.master, columns=("ID", "AÑO"), show="headings")
+        self.tree = ttk.Treeview(self.master, columns=("ID", "ANUALIDAD"), show="headings")
         self.tree.column("ID", width=400, anchor="center")
-        self.tree.column("AÑO", width=400, anchor="center")
+        self.tree.column("ANUALIDAD", width=400, anchor="center")
         self.tree.heading("ID", text="ID")
-        self.tree.heading("AÑO", text="AÑO")
+        self.tree.heading("ANUALIDAD", text="ANUALIDAD")
         
         
         # Agregar algunos datos de ejemplo
@@ -44,14 +44,14 @@ class AnoEntrada:
         
         # Agregar un botón para agregar un nuevo año
 
-        self.boton_ver = tk.Button(self.master, text="Ver Año", font=('Freehand521 BT', 10, 'bold'), command=self.ver_meses, bg='green', bd=0, fg='white' ,width=14, height=2)
+        self.boton_ver = tk.Button(self.master, text="Ver", font=('Freehand521 BT', 10, 'bold'), command=self.ver_meses, bg='green', bd=0, fg='white' ,width=14, height=2)
         self.boton_ver.place(x=1100,y=200)
 
-        self.boton_agregar = tk.Button(self.master, text="Agregar Año", font=('Freehand521 BT', 10, 'bold'), command=self.agregar_anio, bg='#3a7ff6', bd=0, fg='white' ,width=14, height=2)
+        self.boton_agregar = tk.Button(self.master, text="Agregar", font=('Freehand521 BT', 10, 'bold'), command=self.agregar_anio, bg='#3a7ff6', bd=0, fg='white' ,width=14, height=2)
         self.boton_agregar.place(x=1100,y=300)
         
         # Agregar un botón para eliminar una fila
-        self.boton_eliminar = tk.Button(self.master, text="Eliminar Año", font=('Freehand521 BT', 10, 'bold'), command=self.eliminar_anio, bg='red', bd=0, fg='white' ,width=14, height=2)
+        self.boton_eliminar = tk.Button(self.master, text="Eliminar", font=('Freehand521 BT', 10, 'bold'), command=self.eliminar_anio, bg='red', bd=0, fg='white' ,width=14, height=2)
         self.boton_eliminar.place(x=1100,y=400)
         
 
@@ -83,7 +83,7 @@ class AnoEntrada:
             # Obtener el valor del año seleccionado
             valor = self.tree.item(seleccion[0])['values'][1]
             self.master.destroy()
-            exec(open("C:\\Users\\Usuario\\Desktop\\Proyecto INCO\\M.I software\\modulos\\entrada\\mes_entrada.py").read())
+            exec(open("E:\\Proyecto INCO\\M.I software\\modulos\\entrada\\mes_entrada.py").read())
 
             
         else:
@@ -94,6 +94,6 @@ if __name__ == "__main__":
     app = AnoEntrada(root)
     #root.geometry("2000x700")  # Establecer el tamaño de la ventana principal
     root.attributes('-fullscreen', True)
-    root.iconbitmap("C:/Users/Usuario/Desktop/Proyecto INCO/M.I software/logoico.ico")
+    root.iconbitmap("E:/Proyecto INCO/M.I software/logoico.ico")
     root.config(bg='white')
     root.mainloop()
